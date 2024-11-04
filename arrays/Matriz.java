@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 //Arrays multidimensionais são apenas arrays dentro das outras
 //{el1 -> {3.2, 3.2, 7.8}, el2, el3}
+//Alunos - Array externo, Notas -> Array interno
 public class Matriz {
 
 	public static void main(String[] args) {
@@ -45,6 +46,11 @@ public class Matriz {
 			System.out.println();
 		}
 		
+		//Também possível com forEach
+//		for(double[] notaAluno: notasTurma) {
+//			System.out.println(Arrays.toString(notaAluno));
+//		}
+		
 		//MÉDIA TURMA
 		
 		double[] mediaAlunos = new double[qtAlunos];
@@ -65,11 +71,11 @@ public class Matriz {
 		
 		//Média geral das notas
 		double mediaTurma = 0;
+		double somaTurma = 0;
 		for(int i = 0; i < qtAlunos; i++) {
-			double soma = 0;
-			soma += mediaAlunos[i];
-			mediaTurma = soma/qtAlunos;
+			somaTurma += mediaAlunos[i];
 		}
+		mediaTurma = somaTurma/qtAlunos;
 		
 		System.out.printf("A média geral da nota final turma é %.2f\n", mediaTurma);
 
