@@ -21,6 +21,9 @@ public class ClienteTeste {
 		c1.listaCompras.add(compra2);
 		
 		System.out.println(c1.Apresentar());
+		
+		System.out.print(c1.FalarCompras(1, 2));
+		
 		System.out.println("O valor da compra 1 foi R$"+compra1.obterValorCompra());
 		System.out.println("O valor da compra 2 foi R$"+compra2.obterValorCompra());
 		
