@@ -12,6 +12,7 @@ public class Jantar {
 		
 		System.out.println(p1.apresentar());
 		p1.comer(c2);
+		p1.comer(null);//retorna o mesmo peso
 		
 		System.out.println(p1.apresentar());
 	}
