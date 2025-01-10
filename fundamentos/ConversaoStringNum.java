@@ -8,8 +8,8 @@ public class ConversaoStringNum {
 		String valor1 = JOptionPane.showInputDialog("Digite o primeiro número: ");
 		String valor2 = JOptionPane.showInputDialog("Digite o segundo número: ");
 
-		double num2 = Double.parseDouble(valor2);
 		double num1 = Double.parseDouble(valor1);
+		double num2 = Double.parseDouble(valor2);
 		//Só com wrapper, sem consertar erros >:)
 
 		double soma = num1 + num2;

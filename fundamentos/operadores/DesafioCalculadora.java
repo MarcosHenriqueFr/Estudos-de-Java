@@ -24,6 +24,7 @@ public class DesafioCalculadora {
 		System.out.printf("Informe uma operação: \n\n1) +\n2) -\n3) *\n4) /");
 		operador = entrada.nextInt();
 		
+		//Encadeamento de ternários, não é muito comum
 		double divisao = num1 / num2;
 		double multiplicacao = operador == 3 ? num1 * num2 : divisao;
 		double subtracao = operador == 2 ? num1 - num2 : multiplicacao;

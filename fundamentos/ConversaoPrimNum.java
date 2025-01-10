@@ -1,7 +1,7 @@
 package fundamentos;
 
 public class ConversaoPrimNum {
-//CAST
+//CAST, entender que vai perder informação
 	public static void main(String[] args) {
 		//int a = (byte) 127;//explicito e limita o valor literal
 		

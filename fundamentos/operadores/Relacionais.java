@@ -3,11 +3,11 @@ package fundamentos.operadores;
 public class Relacionais {
 
 	  public static void main(String[] args) {
-		    boolean trabalho1 = true;
-		    boolean trabalho2 = true;
+		    boolean trabalho1 = false;
+		    boolean trabalho2 = false;
 		    boolean Sairam = trabalho1 || trabalho2;
-		    boolean saudavel = !Sairam;
 		    boolean sorvete = Sairam;
+		    boolean saudavel = !sorvete;
 		    boolean tv50 = trabalho1 && trabalho2;
 		    boolean tv32 = trabalho1 ^ trabalho2;
 		    
