@@ -6,6 +6,11 @@ public class Jogador {//Vários jogadores em um tabuleiro
 	int x;
 	int y;
 	
+	Jogador(int x, int y){
+		this.x = x;
+		this.y = y;
+	}
+	
 	boolean atacar(Jogador oponente) {//Polimorfismo
 		//Para descobrir a proximidade
 		int deltaX = Math.abs(x - oponente.x);

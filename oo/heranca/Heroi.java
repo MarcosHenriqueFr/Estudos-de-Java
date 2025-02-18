@@ -3,6 +3,10 @@ package oo.heranca;
 //Recebe todos os atributos do Jogador, especificando
 public class Heroi extends Jogador{
 	String nome = "Herói";
+	
+	Heroi(int x, int y){
+		super(x, y);
+	}
 
 	//Se uso a mesma identidade do método ele sobrescreve
 	boolean atacar(Jogador oponente) {

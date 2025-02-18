@@ -4,11 +4,9 @@ public class Jogo {
 	//3° Quadrante do plano cartesiano
 
 	public static void main(String[] args) {
-		Heroi heroi = new Heroi();
+		Heroi heroi = new Heroi(2, 10);
 		Monstro monstro = new Monstro();
 		//Generico -> Especifico
-		heroi.x = 2;
-		heroi.y = 10;
 		monstro.x = 6;
 		monstro.y = 7;
 		
