@@ -1,17 +1,20 @@
 package oo.heranca;
 
-public class Jogador {//Vários jogadores em um tabuleiro
+//Vários jogadores em um tabuleiro
+class Jogador {
 
-	int vida = 100;
-	int x;
-	int y;
+	//Temporariamente públicos
+	public int vida = 100;
+	protected int x;
+	protected int y;
 	
-	Jogador(int x, int y){
+	//Não poderá ser executado pois está protected
+	protected Jogador(int x, int y){
 		this.x = x;
 		this.y = y;
 	}
 	
-	boolean atacar(Jogador oponente) {//Polimorfismo
+	public boolean atacar(Jogador oponente) {//Polimorfismo
 		//Para descobrir a proximidade
 		int deltaX = Math.abs(x - oponente.x);
 		int deltaY = Math.abs(y - oponente.y);
@@ -28,7 +31,7 @@ public class Jogador {//Vários jogadores em um tabuleiro
 		}
 	}
 	
-	boolean andar(Direcao direcao) {
+	public boolean andar(Direcao direcao) {
 //		if(direcao == Direcao.NORTE) {
 //			y++;
 //		}

@@ -2,14 +2,14 @@ package oo.heranca;
 
 //Recebe todos os atributos do Jogador, especificando
 public class Heroi extends Jogador{
-	String nome = "Herói";
+	public String nome = "Herói";
 	
-	Heroi(int x, int y){
+	public Heroi(int x, int y){
 		super(x, y);
 	}
 
 	//Se uso a mesma identidade do método ele sobrescreve
-	boolean atacar(Jogador oponente) {
+	public boolean atacar(Jogador oponente) {
 		//chamou o método da superclasse, chamei duas vezes
 		boolean ataque1 = super.atacar(oponente);
 		boolean ataque2 = super.atacar(oponente);

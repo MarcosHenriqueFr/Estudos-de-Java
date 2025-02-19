@@ -3,18 +3,19 @@ package oo.heranca.desafio;
 public class Carro {
 
 	//Como um carro padrão aceleraria
-	String nome = "Carro Padrão";
-	int velocidadeAtual = 20;
-	int delta = 5;
-	int contAcelerou = 0;
-	int contFreou = 0;
-	final int VELOCIDADE_MAXIMA;
+	protected String nome = "Carro Padrão";
+	protected int velocidadeAtual = 20;
+	protected int delta = 5;
+	protected int contAcelerou = 0;
+	protected int contFreou = 0;
+	private final int VELOCIDADE_MAXIMA;//NUNCA MUDA, não importa se é público
 	
-	Carro(int velocidadeMaxima){
+	//Se tirar o construtor padrão, terá impacto em todas as heranças
+	public Carro(int velocidadeMaxima){
 		VELOCIDADE_MAXIMA = velocidadeMaxima;
 	}
 	
-	boolean acelerar() {
+	public boolean acelerar() {
 		if(velocidadeAtual < 0) {
 			velocidadeAtual = 0;
 			return false;
@@ -28,7 +29,7 @@ public class Carro {
 		}
 	}
 	
-	boolean frear() {
+	public boolean frear() {
 		if(velocidadeAtual >= 5) {
 			velocidadeAtual -= 5;
 			contFreou++;
@@ -39,7 +40,7 @@ public class Carro {
 		}
 	}
 	
-	String MostrarVelocidade() {
+	public String MostrarVelocidade() {
 		return String.format("A velocidade do %s é %dKM/H! E acelerou %d vezes"
 				+ " e freou %d vezes\n", nome, velocidadeAtual, contAcelerou, contFreou);
 	}

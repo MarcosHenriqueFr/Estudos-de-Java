@@ -4,21 +4,21 @@ public class Ferrari extends Carro{
 	
 	//Dentro do método eu posso modificar a classe SUPER, mas fora não
 	//Se eu colocar o mesmo nome em um atributo filho, ele só irá esconder e não sobrescrever
-	Ferrari(){
+	public Ferrari(){
 		this(230);
 		this.nome = "Ferrari";
 	}
 	
-	Ferrari(int velocidadeFinal){
+	public Ferrari(int velocidadeFinal){
 		super(velocidadeFinal);
 		delta = 15;
 	}
 
-	int contFinalAcelerar = 0;
-	int contFinalFrear = 0;
+	private int contFinalAcelerar = 0;
+	private int contFinalFrear = 0;
 
 	@Override
-	boolean acelerar() {
+	public boolean acelerar() {
 		boolean acelerou1 = super.acelerar();
 		boolean acelerou2 = super.acelerar();
 		boolean acelerou3 = super.acelerar();
@@ -30,7 +30,7 @@ public class Ferrari extends Carro{
 	
 	//Essa estrutura é um ANNOTATION, ajuda a leitura
 	@Override
-	boolean frear() {
+	public boolean frear() {
 		boolean freou1 = super.frear();
 		boolean freou2 = super.frear();
 		
@@ -39,7 +39,7 @@ public class Ferrari extends Carro{
 		return freou1 || freou2;
 	}
 	
-	String MostrarVelocidade() {
+	public String MostrarVelocidade() {
 		return String.format("A velocidade do %s é %dKM/H! E acelerou %d vezes"
 				+ " e freou %d vezes\n", nome, velocidadeAtual, contFinalAcelerar, contFinalFrear);
 	}
