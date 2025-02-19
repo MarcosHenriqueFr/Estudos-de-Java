@@ -4,7 +4,8 @@ package oo.heranca;
 class Jogador {
 
 	//Temporariamente públicos
-	public int vida = 100;
+	private String nome = "Jogador Padrão";
+	private int vida = 100;
 	protected int x;
 	protected int y;
 	
@@ -12,6 +13,24 @@ class Jogador {
 	protected Jogador(int x, int y){
 		this.x = x;
 		this.y = y;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public int getVida() {
+		return vida;
+	}
+	
+	public void setVida(int vida) {
+		if(vida > 0) {
+			this.vida = vida;
+		}
 	}
 	
 	public boolean atacar(Jogador oponente) {//Polimorfismo

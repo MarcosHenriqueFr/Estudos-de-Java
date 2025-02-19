@@ -23,9 +23,10 @@ public class Jogo {
 		
 //		System.out.printf("A posição x do jogador é: %d\n", j1.x);
 //		System.out.printf("A posição y do jogador é: %d", j1.y);
-		heroi.nome = "Arthur";//NÃO SÓ VEJO COMO MODIFICO
-		System.out.printf("A vida do %s é: %d\n", heroi.nome, heroi.vida);
-		System.out.printf("A vida do %s é: %d\n", monstro.nome, monstro.vida);
+//		heroi.nome = "Arthur";//NÃO SÓ VEJO COMO MODIFICO
+		
+		System.out.printf("A vida do %s é: %d\n", heroi.getNome(), heroi.getVida());
+		System.out.printf("A vida do %s é: %d\n", monstro.getNome(), monstro.getVida());
 		
 		heroi.atacar(monstro);
 		heroi.atacar(monstro);
@@ -33,8 +34,8 @@ public class Jogo {
 		monstro.atacar(heroi);
 //		monstro.vida = 2000; O usuário tem acesso livre ao dado
 		
-		System.out.printf("A vida do %s é: %d\n", heroi.nome, heroi.vida);
-		System.out.printf("A vida do %s é: %d\n", monstro.nome, monstro.vida);
+		System.out.printf("A vida do %s é: %d\n", heroi.getNome(), heroi.getVida());
+		System.out.printf("A vida do %s é: %d\n", monstro.getNome(), monstro.getVida());
 	}
 
 }
