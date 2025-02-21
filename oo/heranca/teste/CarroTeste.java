@@ -8,7 +8,8 @@ public class CarroTeste {
 
 	public static void main(String[] args) {
 		Carro fusca = new Fusca();
-		Carro ferrari = new Ferrari();
+		//Tem que ser especifico para usar a interface
+		Ferrari ferrari = new Ferrari();
 		Carro teste = new Carro(60);
 		
 		System.out.println(fusca.MostrarVelocidade());
@@ -36,9 +37,18 @@ public class CarroTeste {
 		ferrari.acelerar();
 		ferrari.acelerar();
 		ferrari.acelerar();
+		
+		ferrari.ligarTurbo();
+		
 		ferrari.acelerar();
 		ferrari.acelerar();
+		
+		ferrari.ligarAr();
+		
 		ferrari.acelerar();
+		
+		ferrari.desligarAr();
+		ferrari.desligarTurbo();
 		
 		System.out.println(teste.MostrarVelocidade());
 		System.out.println(fusca.MostrarVelocidade());

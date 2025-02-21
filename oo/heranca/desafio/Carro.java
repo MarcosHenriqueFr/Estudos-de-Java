@@ -5,7 +5,7 @@ public class Carro {
 	//Como um carro padrão aceleraria
 	protected String nome = "Carro Padrão";
 	protected int velocidadeAtual = 20;
-	protected int delta = 5;
+	private int delta = 5;
 	protected int contAcelerou = 0;
 	protected int contFreou = 0;
 	private final int VELOCIDADE_MAXIMA;//NUNCA MUDA, não importa se é público
@@ -15,16 +15,25 @@ public class Carro {
 		VELOCIDADE_MAXIMA = velocidadeMaxima;
 	}
 	
+	public int getDelta() {
+		return delta;
+	}
+
+	public void setDelta(int delta) {
+		delta = Math.abs(delta);
+		this.delta = delta;
+	}
+
 	public boolean acelerar() {
 		if(velocidadeAtual < 0) {
 			velocidadeAtual = 0;
 			return false;
-		} else if(velocidadeAtual + delta > VELOCIDADE_MAXIMA) {
+		} else if(velocidadeAtual + getDelta() > VELOCIDADE_MAXIMA) {
 			velocidadeAtual = VELOCIDADE_MAXIMA;
 			return true;
 		} else {
 			contAcelerou++;
-			velocidadeAtual += 5;
+			velocidadeAtual += getDelta();
 			return true;
 		}
 	}
