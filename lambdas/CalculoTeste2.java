@@ -6,7 +6,7 @@ public class CalculoTeste2 {
 		//Escrevo a "classe" soma diretamente
 		//Crio a interface genérica "Calculo" e implemento o código dentro da execução
 		//Basicamente uma Arrow function/Lambda Function
-		Calculo soma = (x, y) -> x * y;
+		Calculo soma = (x , y) -> x * y;
 		
 		//Obrigatorio desse método: dois parametros e um return double
 		//Com chaves precisa de return, pois é um bloco
