@@ -35,7 +35,7 @@ public class DesafioFilter2 {
 				.filter(isFreteGratis)
 				.filter(isRelevante)
 				.map(apresentarProduto)
-				.forEach(System.out::println);
+				.forEach(System.out::println); //Da para usar um JSON fora usando o console
 		
 //		entrada.close();
 	}
