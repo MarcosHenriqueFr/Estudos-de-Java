@@ -4,9 +4,9 @@ public class aplicacao {
 
 	public static void main(String[] args) {
 		String[] nomes = {"João", "Mauro", "José", "Sofia"};
-		Arquivo a1 = new Arquivo();
+		ArquivoF arquivo = new ArquivoF();
 		
-		a1.escreverArquivo(nomes);
-		a1.lerArquivo();
+		arquivo.escreverArquivo(nomes);
+		arquivo.lerArquivo();
 	}
 }

@@ -5,8 +5,10 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Arquivo {
+public class ArquivoF {
 
 	ClassLoader loader = getClass().getClassLoader();
 	
@@ -14,13 +16,18 @@ public class Arquivo {
 		try {
 			FileReader teste = new FileReader(loader.getResource("resources/teste.txt").getFile());
 			BufferedReader reader = new BufferedReader(teste);
+			List<String> linhasArquivo = new ArrayList<String>(); 
 			
 			System.out.println(reader.readLine()); // lê somente essa linha
 			
 			String linha;
 			while((linha = reader.readLine()) != null) {
-				System.out.println(linha);
+				linhasArquivo.add(linha);
 			}
+			
+			System.out.println(linhasArquivo.size());
+			System.out.println(linhasArquivo.toString());
+			linhasArquivo.stream().forEach(System.out::println);
 			
 			reader.close();
 		} catch (IOException e) {
