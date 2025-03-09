@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class DesafioArray {
 
 	public static void main(String[] args) {
-		//Pedir para o usuário informar as notas do aluno(1) e depois fazer a media(2) e mostrar
+		
 		Scanner entrada = new Scanner(System.in);
 		int quantidadeNotas;
 		double soma = 0;
