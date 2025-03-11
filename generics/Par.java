@@ -46,4 +46,18 @@ public class Par <K, V>{
 		Par<?, ?> other = (Par<?, ?>) obj;
 		return Objects.equals(chave, other.chave);
 	}
+	
+	//metodo de comparação natural de uma classe
+	//é bom que essa ordem natural seja consistente com o equals
+//	@Override
+//	public int compareTo(Par<K, V> o) {
+//		//Trabalhando com numeros
+//		if() {			
+//			return -1;
+//		} else if(this.chave < o.chave) {			
+//			return 1;
+//		} else {			
+//			return 0;
+//		}
+//	}
 }

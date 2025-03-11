@@ -9,7 +9,7 @@ public class Pares<K extends Number, V> {
 
 	//No momento que eu instanciar
 	//Uso de diferentes collections, LinkedHashSet -> garante uma ordem a partir de inclusão
-	private final Set<Par<K, V>> itens = new LinkedHashSet<>();
+	private final Set<Par<K, V>> itens = new LinkedHashSet<Par<K,V>>();
 	
 	public void adicionar(K chave, V valor) {
 		//return em um void, sai do metodo
